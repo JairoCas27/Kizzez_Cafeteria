@@ -1,0 +1,324 @@
+:root {
+    --color-dark: #1a120b;
+    --color-medium: #3c2a21;
+    --color-light: #e5e5cb;
+    --color-accent: #d5cea3;
+    --color-gold: #b89146;
+    --color-gold-light: #d6ae67;
+}
+
+/* Tipografía y fondo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-dark);
+    color: #fff;
+    letter-spacing: 0.03em;
+}
+h1,h2,h3,h4,h5,h6,.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* Utilidades personalizadas */
+.bg-custom-dark { 
+    background-color: var(--color-dark); 
+}
+
+.bg-medium { 
+    background-color: var(--color-medium); 
+}
+
+.text-gold { 
+    color: var(--color-gold); 
+}
+
+.text-white-70 { 
+    color: rgba(255,255,255,0.7); 
+}
+
+.letter-spacing-2 { 
+    letter-spacing: 0.12em; 
+}
+
+/* Bordes y colores usados en varias partes */
+.border-accent { 
+    border: 1px solid rgba(213, 206, 163, 0.12) !important;
+}
+
+.bg-gold { 
+    background-color: var(--color-gold) !important; 
+    color: #000 !important; 
+}
+
+/* Botones */
+.btn-warning {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #000;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn-warning:hover {
+    background-color: var(--color-gold-light);
+    border-color: var(--color-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.btn-outline-light:hover {
+    background-color: transparent;
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(184,145,70,0.18);
+}
+
+/* NAVBAR: color fijo */
+.navbar {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    transition: all 0.3s ease;
+    background-color: rgba(26, 18, 11, 0.95);
+}
+.navbar-brand { 
+    font-size: 1.8rem; 
+    letter-spacing: 0.05em; 
+}
+
+.nav-link { 
+    position: relative; 
+    font-weight: 500; 
+    letter-spacing: 0.05em; 
+    transition: color 0.25s ease; 
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--color-gold);
+    transition: width 0.25s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { 
+    width: 100%; 
+}
+
+/* Asegura que el fondo de la navbar cubra todo el ancho */
+header .navbar {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+/* Carrusel*/
+.carousel-item { 
+    min-height: 420px; 
+    height: 90vh; 
+    overflow: hidden; 
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    display: block;
+}
+.carousel-caption {
+    top: auto;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    left: auto;
+    text-align: right;
+    width: auto;
+    max-width: 520px;
+    padding: 0;
+}
+.carousel-caption .card-overlay {
+    backdrop-filter: blur(6px);
+    background-color: rgba(26,18,11,0.75);
+    border: 1px solid rgba(213,206,163,0.12);
+    border-radius: 12px;
+    padding: 1.6rem;
+}
+
+/* Tarjetas de producto */
+.product-card {
+    background: linear-gradient(145deg, #2a1e16, #35261d);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(213,206,163,0.08);
+    position: relative;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.24);
+    border-color: rgba(213,206,163,0.18);
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(58,42,32,0.86);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0;
+    transition: all 0.28s ease;
+    border-radius: 16px;
+    pointer-events: none;
+}
+.product-card:hover .hover-overlay { 
+    opacity: 1; 
+    pointer-events: auto; 
+}
+
+.hover-overlay a { 
+    transform: translateY(10px); 
+    transition: all 0.25s ease; 
+    margin: 0 6px; 
+    border-radius: 50%;
+    width: 52px;
+    height: 52px; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+}
+
+.product-card:hover .hover-overlay a { 
+    transform: translateY(0); 
+}
+
+/* Efectos y accesibilidad */
+.floating-btn { 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+    transition: all 0.25s ease; 
+}
+
+.floating-btn:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.28); 
+}
+
+/* Botones flotantes (estilos trasladados desde HTML inline) */
+.btn-whatsapp {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+.btn-order {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    padding: 0.8rem 1.5rem;
+    z-index: 1000;
+}
+
+/* Typewriter */
+.typewriter h1 {
+    overflow: hidden;
+    border-right: 0.12em solid var(--color-gold);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+    animation: typing 3.5s steps(40,end), blink-caret .75s step-end infinite;
+    font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+}
+@keyframes typing { 
+    from { width: 0 } to { width: 100% } 
+}
+
+@keyframes blink-caret { 
+    from,to { border-color: transparent } 50% { border-color: var(--color-gold) } 
+}
+
+/* Imagenes en escala */
+.grayscale { 
+    filter: grayscale(1) brightness(0.85); 
+    opacity: 0.8; 
+    transition: all 0.35s ease; 
+}
+
+.grayscale:hover { 
+    filter: grayscale(0) brightness(1); 
+    opacity: 1; 
+}
+
+/* Avatar effect */
+.card-img-top .rounded-circle { 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+    transition: all 0.3s ease; 
+}
+.product-card:hover .card-img-top .rounded-circle { 
+    transform: scale(1.05); 
+}
+
+/* Footer gradient */
+footer { 
+    background: linear-gradient(to bottom, #1a120b, #2a1e16); 
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+    .carousel-caption { right: 1.25rem; bottom: 1.5rem; max-width: 480px; }
+}
+@media (max-width: 768px) {
+    .carousel-item { height: 60vh; }
+    .carousel-item img { height: 60vh; }
+    .carousel-caption { left: 0; right: 0; bottom: 1rem; text-align: center; max-width: 92%; margin: 0 auto; }
+    .carousel-caption .card-overlay { padding: 1rem; }
+    .typewriter h1 { font-size: 1.6rem; }
+}
+
+@media (max-width: 420px) {
+    .navbar-brand img { 
+        width: 48px; height:48px; 
+    }
+}
+
+/* Logos marcas: inician blancos y al hover se tornan amarillos */
+.brand-logo {
+    display: inline-block;
+    max-height: 70px;
+    width: auto;
+    transition: filter 0.35s ease, transform 0.25s ease, opacity 0.25s ease;
+    filter: brightness(0) saturate(100%) invert(1);
+    opacity: 0.95;
+}
+.brand-logo:hover,
+.brand-logo:focus {
+    transform: translateY(-4px);
+    filter: brightness(0) saturate(100%) sepia(1) saturate(700%) hue-rotate(18deg) contrast(0.95);
+    opacity: 1;
+}
+.brand-logo.active {
+    filter: brightness(0) saturate(100%) sepia(1) saturate(700%) hue-rotate(18deg) contrast(0.95);
+    opacity: 1;
+}
+
+/* Estilos para el dropdown del usuario en la navbar */
+.navbar .dropdown-toggle { color: #fff; text-decoration: none; cursor: pointer; }
+.navbar .dropdown-menu-dark {
+    background-color: rgba(26,18,11,0.98);
+    border: 1px solid rgba(213,206,163,0.08);
+    min-width: 10rem;
+}
+.navbar .dropdown-menu-dark .dropdown-item {
+    color: rgba(255,255,255,0.9);
+}
+.navbar .dropdown-menu-dark .dropdown-item:hover,
+.navbar .dropdown-menu-dark .dropdown-item:focus {
+    background-color: var(--color-gold);
+    color: #000;
+}

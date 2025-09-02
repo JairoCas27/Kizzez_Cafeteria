@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kizzez</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Iconos Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../Cafeteria-zz/CSS/styleInicio.css">
+</head>
+<body class="bg-custom-dark">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- BARRA SUPERIOR: horario y teléfono -->
+  <div class="bg-dark border-bottom border-accent py-2">
+    <div class="container d-flex justify-content-between small text-white-50">
+      <div><i class="bi bi-clock me-1"></i> Lun - Dom: 07:00 - 21:00</div>
+      <div><i class="bi bi-telephone me-1"></i> +51 954 651 321 • Envíos en <strong class="text-gold">24h</strong></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky-top w-100">
+    <nav class="navbar navbar-expand-md navbar-dark py-2">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Inicio Kizzez">
+          <img src="../Cafeteria-zz/img/logo_empresa.png" alt="Logo Kizzez" class="rounded-circle" width="64" height="64" loading="lazy">
+          <span class="fw-bold">KIZZEZ</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav text-uppercase fw-semibold">
+            <li class="nav-item px-2"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="#">Productos</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="#">Servicios</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="#">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center ms-auto gap-3">
+          <!-- Dropdown usuario -->
+          <div class="dropdown">
+            <a class="text-white text-decoration-none d-flex align-items-center dropdown-toggle" href="#" id="userDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" role="button">
+              <i class="bi bi-person-circle fs-5" aria-hidden="true"></i>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="#" data-action="login">Iniciar sesión</a></li>
+              <li><a class="dropdown-item" href="#" data-action="register">Registrarse</a></li>
+              <li><a class="dropdown-item" href="admin.html" data-action="admin">Admin</a></li>
+            </ul>
+          </div>
+
+          <!-- Carrito -->
+          <a href="#" class="text-white text-decoration-none position-relative" aria-label="Carrito">
+            <i class="bi bi-cart3 fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold text-dark">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CARRUSEL -->
+  <section class="container-fluid px-0 mb-5">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="../Cafeteria-zz/img/caffe_01.png" class="d-block w-100" alt="Taza de café Kizzez" loading="lazy">
+          <div class="carousel-caption d-flex align-items-end">
+            <div class="card-overlay">
+              <div class="typewriter text-end">
+                <h1 class="display-5 fw-bold text-gold mb-2">Café que inspira</h1>
+              </div>
+              <p class="mb-3 text-white-70">Sabores artesanales, ambiente cálido y entrega en todo Lima.</p>
+              <div class="d-flex gap-2 justify-content-end flex-wrap">
+                <a class="btn btn-warning btn-lg px-4" href="#">Ver Productos</a>
+                <a class="btn btn-outline-light btn-lg px-4" href="#">Nuestra Carta</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="../Cafeteria-zz/img/caffe_02.png" class="d-block w-100" alt="Postres Kizzez" loading="lazy">
+          <div class="carousel-caption d-flex align-items-end">
+            <div class="card-overlay text-end">
+              <h2 class="h2 fw-bold text-gold mb-2">Postres artesanales</h2>
+              <p class="mb-3 text-white-70">Acompaña tu taza con repostería hecha a mano.</p>
+              <a class="btn btn-outline-light btn-lg px-4" href="#">Ver Más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="../Cafeteria-zz/img/caffe_03.png" class="d-block w-100" alt="Ambiente Kizzez" loading="lazy">
+          <div class="carousel-caption d-flex align-items-end">
+            <div class="card-overlay text-end">
+              <h2 class="h2 fw-bold text-gold mb-2">Tu rincón favorito</h2>
+              <p class="mb-3 text-white-70">Un espacio para estudiar, trabajar o desconectar.</p>
+              <a class="btn btn-outline-light btn-lg px-4" href="#">Reservar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="container-fluid py-4 border-top border-accent mb-5">
+    <div class="container">
+      <p class="text-center text-uppercase small text-white-50 mb-4 letter-spacing-2">Trabajamos con las mejores marcas</p>
+      <div class="row text-center align-items-center gy-4">
+        <div class="col-4 col-md-2 mx-auto">
+          <img src="../Cafeteria-zz/img/Lavazza_Logo.png" class="brand-logo img-fluid" alt="Lavazza" loading="lazy">
+        </div>
+        <div class="col-4 col-md-2 mx-auto">
+          <img src="../Cafeteria-zz/img/britt_logo.png" class="brand-logo img-fluid" alt="Britt" loading="lazy">
+        </div>
+        <div class="col-4 col-md-2 mx-auto">
+          <img src="../Cafeteria-zz/img/nescafe_logo.png" class="brand-logo img-fluid" alt="Nescafé" loading="lazy">
+        </div>
+        <div class="col-4 col-md-2 mx-auto">
+          <img src="../Cafeteria-zz/img/Lavazza_Logo.png" class="brand-logo img-fluid" alt="Lavazza" loading="lazy">
+        </div>
+        <div class="col-4 col-md-2 mx-auto">
+          <img src="../Cafeteria-zz/img/britt_logo.png" class="brand-logo img-fluid" alt="Britt" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="container my-5 py-4">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 text-center text-lg-start position-relative">
+        <div class="position-absolute top-0 start-0 w-100 h-100 mt-3 ms-3 border border-accent rounded-3" aria-hidden="true"></div>
+        <img src="../Cafeteria-zz/img/cafe_presentacion.jpg" class="img-fluid rounded-3 shadow-sm position-relative" alt="Presentación Kizzez" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fs-1 fw-bold text-gold mb-3">¿Quiénes somos?</h2>
+        <p class="lead fst-italic text-white">Una cafetería apasionada por el café de calidad, los sabores auténticos y las experiencias memorables.</p>
+        <p class="text-white-70 mb-4">Bebidas frías y calientes, postres artesanales y un servicio rápido pensado para tu día a día. Seleccionamos personalmente cada grano para garantizar la mejor taza de café.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a class="btn btn-warning btn-lg px-4" href="#">Nuestra Carta</a>
+          <a class="btn btn-outline-light btn-lg px-4" href="#">Ubícanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <section class="container-fluid py-5 border-top border-accent mb-5 bg-medium">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h3 class="h4 text-uppercase text-gold mb-3 letter-spacing-2">Envío Express</h3>
+          <p class="display-6 fw-light text-white">ENVÍOS A TODO LIMA EN <span class="fw-bold text-gold">MENOS DE 24 HORAS</span></p>
+          <a href="#" class="btn btn-outline-light btn-lg mt-3 px-5">Hacer Pedido</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="container my-5 py-4">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <h2 class="fw-bold display-5 mb-0 text-gold">Nuestros Productos</h2>
+      <a class="btn btn-outline-light" href="#">Ver todo <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <!-- Producto 1 -->
+      <div class="col">
+        <div class="card h-100 text-center product-card">
+          <div class="position-absolute top-0 start-0 m-3">
+            <span class="badge bg-warning text-dark">Nuevo</span>
+          </div>
+          <div class="card-img-top p-4">
+            <img src="../Cafeteria-zz/img/cafe_productos.png" class="mx-auto rounded-circle bg-white p-2" alt="Expresso Doble" style="width:140px; height:140px; object-fit:cover;" loading="lazy">
+          </div>
+
+          <div class="hover-overlay">
+            <a href="#" class="btn btn-light" title="Ver producto" aria-label="Ver producto"><i class="bi bi-eye"></i></a>
+            <a href="#" class="btn btn-warning" title="Agregar al carrito" aria-label="Agregar al carrito"><i class="bi bi-plus"></i></a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title fs-4 text-gold">Café Expresso Doble</h5>
+            <p class="card-text text-white-70">Doble shot de nuestro café premium con crema aromática</p>
+            <p class="card-text text-white-70">4 Oz</p>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+              <span class="h4 mb-0 text-gold">S/ 12.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="col">
+        <div class="card h-100 text-center product-card">
+          <div class="card-img-top p-4">
+            <img src="../Cafeteria-zz/img/cafe_productos(2).png" class="mx-auto rounded-circle bg-white p-2" alt="Expresso" style="width:140px; height:140px; object-fit:cover;" loading="lazy">
+          </div>
+
+          <div class="hover-overlay">
+            <a href="#" class="btn btn-light" title="Ver producto" aria-label="Ver producto"><i class="bi bi-eye"></i></a>
+            <a href="#" class="btn btn-warning" title="Agregar al carrito" aria-label="Agregar al carrito"><i class="bi bi-plus"></i></a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title fs-4 text-gold">Café Expresso</h5>
+            <p class="card-text text-white-70">Intenso y aromático, preparado con granos seleccionados</p>
+            <p class="card-text text-white-70">2 Oz</p>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+              <span class="h4 mb-0 text-gold">S/ 7.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="col">
+        <div class="card h-100 text-center product-card">
+          <div class="card-img-top p-4">
+            <img src="../Cafeteria-zz/img/cafe_productos(3).png" class="mx-auto rounded-circle bg-white p-2" alt="Capuchino" style="width:140px; height:140px; object-fit:cover;" loading="lazy">
+          </div>
+
+          <div class="hover-overlay">
+            <a href="#" class="btn btn-light" title="Ver producto" aria-label="Ver producto"><i class="bi bi-eye"></i></a>
+            <a href="#" class="btn btn-warning" title="Agregar al carrito" aria-label="Agregar al carrito"><i class="bi bi-plus"></i></a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title fs-4 text-gold">Café Capuchino</h5>
+            <p class="card-text text-white-70">Perfecto balance entre espresso, leche vaporizada y espuma</p>
+            <p class="card-text text-white-70">12 Oz</p>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+              <span class="h4 mb-0 text-gold">S/ 15.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="col">
+        <div class="card h-100 text-center product-card">
+          <div class="card-img-top p-4">
+            <img src="../Cafeteria-zz/img/cafe_productos(4).png" class="mx-auto rounded-circle bg-white p-2" alt="Latte" style="width:140px; height:140px; object-fit:cover;" loading="lazy">
+          </div>
+
+          <div class="hover-overlay">
+            <a href="#" class="btn btn-light" title="Ver producto" aria-label="Ver producto"><i class="bi bi-eye"></i></a>
+            <a href="#" class="btn btn-warning" title="Agregar al carrito" aria-label="Agregar al carrito"><i class="bi bi-plus"></i></a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title fs-4 text-gold">Café Latte</h5>
+            <p class="card-text text-white-70">Suave y cremoso, con un toque de arte latte en cada taza</p>
+            <p class="card-text text-white-70">8 Oz</p>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+              <span class="h4 mb-0 text-gold">S/ 9.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="col">
+        <div class="card h-100 text-center product-card">
+          <div class="position-absolute top-0 start-0 m-3">
+            <span class="badge bg-danger">Popular</span>
+          </div>
+          <div class="card-img-top p-4">
+            <img src="../Cafeteria-zz/img/cafe_productos(5).png" class="mx-auto rounded-circle bg-white p-2" alt="Chocolate" style="width:140px; height:140px; object-fit:cover;" loading="lazy">
+          </div>
+
+          <div class="hover-overlay">
+            <a href="#" class="btn btn-light" title="Ver producto" aria-label="Ver producto"><i class="bi bi-eye"></i></a>
+            <a href="#" class="btn btn-warning" title="Agregar al carrito" aria-label="Agregar al carrito"><i class="bi bi-plus"></i></a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title fs-4 text-gold">Chocolate Caliente</h5>
+            <p class="card-text text-white-70">Elaborado con chocolate belga de alta calidad y leche cremosa</p>
+            <p class="card-text text-white-70">10 Oz</p>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+              <span class="h4 mb-0 text-gold">S/ 15.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="col">
+        <div class="card h-100 text-center product-card">
+          <div class="card-img-top p-4">
+            <img src="../Cafeteria-zz/img/cafe_productos(6).png" class="mx-auto rounded-circle bg-white p-2" alt="Mochaccino" style="width:140px; height:140px; object-fit:cover;" loading="lazy">
+          </div>
+
+          <div class="hover-overlay">
+            <a href="#" class="btn btn-light" title="Ver producto" aria-label="Ver producto"><i class="bi bi-eye"></i></a>
+            <a href="#" class="btn btn-warning" title="Agregar al carrito" aria-label="Agregar al carrito"><i class="bi bi-plus"></i></a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title fs-4 text-gold">Café Mochaccino</h5>
+            <p class="card-text text-white-70">La combinación perfecta de chocolate y café con topping de crema</p>
+            <p class="card-text text-white-70">12 Oz</p>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+              <span class="h4 mb-0 text-gold">S/ 14.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="container my-5 py-5">
+    <h2 class="text-center fw-bold display-5 mb-5 text-gold">Nuestra historia</h2>
+    <div class="row g-5 mb-5">
+      <div class="col-md-6">
+        <p class="lead fs-4"><strong class="text-gold">Nacimos en 2020</strong> con un propósito: hacer buen café accesible y rápido, sin renunciar a la calidad.</p>
+      </div>
+      <div class="col-md-6">
+        <p class="text-white-70 fs-5">Nuestro primer local en Los Olivos fue el inicio de una comunidad que hoy disfruta de nuestras tazas y postres. Cada día tostamos granos seleccionados para ofrecerte la mejor experiencia.</p>
+      </div>
+    </div>
+
+    <div class="card mt-3 bg-medium border-accent shadow-sm overflow-hidden">
+      <div class="row g-0 align-items-center">
+        <div class="col-md-4 p-3 text-center">
+          <img src="../Cafeteria-zz/img/cafe_historiaa.png" class="img-fluid rounded-3" alt="Local Los Olivos" loading="lazy">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body p-4">
+            <h3 class="fw-bold display-6 mb-3 text-gold">Nuestro primer local - Los Olivos</h3>
+            <p class="text-white-70 mb-4">Un lugar cálido que se convirtió en punto de encuentro para vecinos y visitantes. Diseñado para que te sientas como en casa mientras disfrutas del mejor café.</p>
+            <p class="small mt-2 text-gold"><i class="bi bi-calendar-event me-2"></i>Inaugurado el 16 de octubre de 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="container-fluid py-5 border-top border-accent bg-medium">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h3 class="h2 text-gold mb-3">Suscríbete a nuestro newsletter</h3>
+          <p class="text-white-70 mb-4">Recibe noticias, promociones exclusivas y tips para amantes del café.</p>
+          <form class="d-flex gap-2" onsubmit="event.preventDefault(); alert('Gracias por suscribirte');">
+            <input type="email" class="form-control form-control-lg bg-dark border-accent text-white" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+            <button class="btn btn-warning btn-lg" type="submit">Suscribirme</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTONES FLOATING: WhatsApp y Pedir -->
+  <a href="https://wa.me/51954651321" class="btn btn-success rounded-circle shadow floating-btn btn-whatsapp" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp fs-4" aria-hidden="true"></i>
+  </a>
+
+  <a href="#" class="btn btn-warning rounded-pill shadow floating-btn btn-order" aria-label="Pedir ahora">
+    <i class="bi bi-bag-fill me-2" aria-hidden="true"></i> Pedir ahora
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="container-fluid text-light py-5 border-top border-accent mt-5">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-12 col-md-4">
+          <h3 class="h4 fw-bold text-gold mb-4">KIZZEZ</h3>
+          <p class="text-white-70 mb-0">Café con alma, sabor con tradición</p>
+          <p class="text-white-70 mt-3"><i class="bi bi-geo-alt me-2"></i>Av. Principal 123, Los Olivos - Lima</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-4">Enlaces rápidos</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2"></i>Nuestra carta</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2"></i>Promociones</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2"></i>Reservas</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2"></i>Delivery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-4">Síguenos</h6>
+          <div class="d-flex gap-3 mb-4">
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width: 40px; height: 40px;"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width: 40px; height: 40px;"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width: 40px; height: 40px;"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+          </div>
+
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-3">Contacto</h6>
+          <p class="mb-2"><i class="bi bi-telephone me-2"></i>+51 954 651 321</p>
+          <p class="mb-0"><i class="bi bi-clock me-2"></i>Lun-Dom: 07:00 - 21:00</p>
+        </div>
+      </div>
+
+      <div class="text-center text-white-50 small mt-5 pt-3 border-top border-accent">© <span id="year"></span> Kizzez. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+</body>
+</html>
