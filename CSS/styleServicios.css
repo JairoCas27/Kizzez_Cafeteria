@@ -1,0 +1,267 @@
+:root {
+    --color-dark: #1a120b;
+    --color-medium: #3c2a21;
+    --color-light: #e5e5cb;
+    --color-accent: #d5cea3;
+    --color-gold: #b89146;
+    --color-gold-light: #d6ae67;
+}
+
+/* Tipografía y fondo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-dark);
+    color: #fff;
+    letter-spacing: 0.03em;
+}
+h1,h2,h3,h4,h5,h6,.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* Utilidades personalizadas */
+.bg-custom-dark { 
+    background-color: var(--color-dark); 
+}
+
+.bg-medium { 
+    background-color: var(--color-medium); 
+}
+
+.text-gold { 
+    color: var(--color-gold); 
+}
+
+.text-white-70 { 
+    color: rgba(255,255,255,0.7); 
+}
+
+.letter-spacing-2 { 
+    letter-spacing: 0.12em; 
+}
+
+/* Bordes y colores usados en varias partes */
+.border-accent { 
+    border: 1px solid rgba(213, 206, 163, 0.12) !important;
+}
+
+.bg-gold { 
+    background-color: var(--color-gold) !important; 
+    color: #000 !important; 
+}
+
+/* Botones */
+.btn-warning {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #000;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn-warning:hover {
+    background-color: var(--color-gold-light);
+    border-color: var(--color-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.btn-outline-light:hover {
+    background-color: transparent;
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(184,145,70,0.18);
+}
+
+/* NAVBAR: color fijo */
+.navbar {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    transition: all 0.3s ease;
+    background-color: rgba(26, 18, 11, 0.95);
+}
+.navbar-brand { 
+    font-size: 1.8rem; 
+    letter-spacing: 0.05em; 
+}
+
+.nav-link { 
+    position: relative; 
+    font-weight: 500; 
+    letter-spacing: 0.05em; 
+    transition: color 0.25s ease; 
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--color-gold);
+    transition: width 0.25s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { 
+    width: 100%; 
+}
+
+/* Asegura que el fondo de la navbar cubra todo el ancho */
+header .navbar {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+/* Hero Section */
+.services-hero {
+    background: linear-gradient(rgba(26, 18, 11, 0.85), rgba(26, 18, 11, 0.85)), url('/img/cafe_servicios.jpg') center/cover no-repeat;
+    padding: 8rem 0 5rem;
+    text-align: center;
+}
+
+/* Tarjetas de servicio */
+.service-card {
+    background: linear-gradient(145deg, #2a1e16, #35261d);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(213,206,163,0.08);
+    height: 100%;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.24);
+    border-color: rgba(213,206,163,0.18);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-medium);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--color-gold);
+    transition: all 0.3s ease;
+}
+.service-card:hover .service-icon {
+    background: var(--color-gold);
+    color: var(--color-dark);
+    transform: scale(1.1);
+}
+
+/* Proceso de servicio */
+.process-step {
+    position: relative;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+.process-step:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: -15%;
+    width: 30%;
+    height: 2px;
+    background: var(--color-accent);
+    opacity: 0.3;
+}
+.step-number {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-medium);
+    border: 2px solid var(--color-gold);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-gold);
+}
+
+/* Testimonios */
+.testimonial-card {
+    background: linear-gradient(145deg, #2a1e16, #35261d);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(213,206,163,0.08);
+    height: 100%;
+}
+.testimonial-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-gold);
+}
+
+/* FAQ */
+.accordion-button {
+    background-color: var(--color-medium);
+    color: white;
+    font-weight: 500;
+}
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+}
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--color-gold);
+}
+.accordion-body {
+    background-color: var(--color-dark);
+    color: rgba(255,255,255,0.8);
+}
+
+/* Efectos y accesibilidad */
+.floating-btn { 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+    transition: all 0.25s ease; 
+}
+
+.floating-btn:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.28); 
+}
+
+/* Botones flotantes */
+.btn-whatsapp {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+.btn-order {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    padding: 0.8rem 1.5rem;
+    z-index: 1000;
+}
+
+/* Footer gradient */
+footer { 
+    background: linear-gradient(to bottom, #1a120b, #2a1e16); 
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+    .process-step:not(:last-child):after {
+    display: none;
+    }
+}
+@media (max-width: 768px) {
+    .services-hero {
+    padding: 6rem 0 4rem;
+    }
+}

@@ -133,7 +133,7 @@ function renderProductsTable(filterText='', filterCat='', filterStatus='') {
     // Crear filas para cada producto
     products.forEach(p => {
         // Imagen por defecto si no hay
-        const img = p.image || '../Cafeteria-zz/img/cafe_productos.png';
+        const img = p.image || '/img/productos/producto01.png';
         const tr = document.createElement('tr');
         tr.innerHTML = `
         <td><img src="${escapeAttr(img)}" alt="Imagen ${escapeAttr(p.name)}" class="product-image-preview"></td>

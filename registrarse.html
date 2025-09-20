@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kizzez - Registrarse</title>
+  <link rel="icon" href="/img/logos/logo_Kizzez02.png" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="/CSS/styleInicio.css" />
+    <link rel="stylesheet" href="/CSS/styleLogin.css">
+</head>
+<body class="bg-custom-dark">
+
+  <!-- Bootstrap JS (necesario para componentes) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/JS/scriptLogin.js"></script>
+
+  <!-- TopBar -->
+  <div class="bg-dark border-bottom border-accent py-2">
+    <div class="container d-flex justify-content-between small text-white-50">
+      <div><i class="bi bi-clock me-1"></i> Lun - Dom: 07:00 - 21:00</div>
+      <div><i class="bi bi-telephone me-1"></i> +51 954 651 321 • Envíos en <strong class="text-gold">24h</strong></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky-top w-100 mb-4">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio Kizzez">
+          <img src="/img/logos/logo_Kizzez.png" alt="Logo Kizzez" class="rounded-circle" width="56" height="56" loading="lazy" />
+          <span class="fw-bold">KIZZEZ</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav text-uppercase fw-semibold">
+            <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="productos.html">Productos</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center ms-auto gap-3">
+          <a class="text-white text-decoration-none d-flex align-items-center gap-2" href="#" aria-label="Usuario" data-bs-toggle="modal">
+            <i class="bi bi-person-circle fs-4"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none position-relative" aria-label="Carrito">
+            <i class="bi bi-cart3 fs-4"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold text-dark">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN: LOGIN -->
+  <main class="container my-5 py-4">
+    <div class="row g-0 align-items-center">
+      <!-- Lado izquierdo: imagen -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <!-- Ajusta la imagen en /img/ acorde a tu proyecto -->
+        <img src="/img/contenido/cafe1.jpg" alt="Café Kizzez" class="auth-side-img" />
+      </div>
+
+      <!-- Lado derecho: Card con tabs -->
+      <div class="col-lg-6">
+        <div class="card auth-card cascading-right p-3">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <h3 class="fw-bold text-gold mb-1">Accede a tu cuenta</h3>
+                <p class="small text-white-70 mb-0">Inicia sesión o crea tu cuenta para pedir y recibir promociones.</p>
+              </div>
+              <div>
+                <i class="bi bi-person-circle fs-2 text-white-50" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <!-- Nav Tabs -->
+            <ul class="nav nav-pills nav-auth mb-4" role="tablist">
+              <li class="nav-item me-2" role="presentation">
+                <button class="nav-link" id="tab-login" data-bs-toggle="pill" data-bs-target="#pane-login" type="button" role="tab" aria-controls="pane-login" aria-selected="true">
+                  Iniciar sesión
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-register" data-bs-toggle="pill" data-bs-target="#pane-register" type="button" role="tab" aria-controls="pane-register" aria-selected="false">
+                  Registrarse
+                </button>
+              </li>
+            </ul>
+
+            <!-- Tabs content -->
+            <div class="tab-content">
+              <!-- PANE: LOGIN -->
+              <div class="tab-pane fade show active" id="pane-login" role="tabpanel" aria-labelledby="tab-login">
+                <form id="loginForm" class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Correo electrónico</label>
+                    <input type="email" id="loginEmail" class="form-control" name="email" placeholder="tucorreo@ejemplo.com" required>
+                    <div class="invalid-feedback">Introduce un correo válido.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Contraseña</label>
+                    <input type="password" id="loginPassword" class="form-control" name="password" minlength="6" placeholder="*******" required>
+                    <div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="remember" />
+                      <label class="form-check-label text-white-70" for="remember">Recordarme</label>
+                    </div>
+                    <a href="#" class="small text-gold">¿Olvidaste tu contraseña?</a>
+                  </div>
+
+                  <button type="submit" class="btn btn-warning w-100">Iniciar</button>
+                </form>
+              </div>
+
+              <!-- PANE: REGISTER -->
+              <div class="tab-pane fade" id="pane-register" role="tabpanel" aria-labelledby="tab-register">
+                <form id="registerForm" class="needs-validation" novalidate>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="regName" class="form-label">Nombre</label>
+                      <input type="text" id="regName" class="form-control" name="name" placeholder="Tu nombre" required>
+                      <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="regLastname" class="form-label">Apellido</label>
+                      <input type="text" id="regLastname" class="form-control" name="lastname" placeholder="Tu apellido" required>
+                      <div class="invalid-feedback">Por favor ingresa tu apellido.</div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="regEmail" class="form-label">Correo electrónico</label>
+                    <input type="email" id="regEmail" class="form-control" name="email" placeholder="tucorreo@ejemplo.com" required>
+                    <div class="invalid-feedback">Introduce un correo válido.</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="regPassword" class="form-label">Contraseña</label>
+                      <input type="password" id="regPassword" class="form-control" name="password" minlength="6" placeholder="Mínimo 6 caracteres" required>
+                      <div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label for="regPasswordConfirm" class="form-label">Confirmar contraseña</label>
+                      <input type="password" id="regPasswordConfirm" class="form-control" name="password_confirm" minlength="6" placeholder="Repite tu contraseña" required>
+                      <div class="invalid-feedback">Las contraseñas deben coincidir.</div>
+                    </div>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                    <label class="form-check-label text-white-70" for="newsletter">Suscribirme al newsletter</label>
+                  </div>
+
+                  <button type="submit" class="btn btn-warning w-100">Crear cuenta</button>
+                </form>
+              </div>
+            </div> <!-- /.tab-content -->
+          </div> <!-- /.card-body -->
+        </div> <!-- /.card -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Toast reutilizable -->
+  <div aria-live="polite" aria-atomic="true" class="position-relative">
+    <div id="authToastContainer" class="position-fixed bottom-0 end-0 p-3" style="z-index:1080;">
+      <div id="authToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" tabindex="-1">
+        <div class="d-flex">
+          <div class="toast-body" id="authToastBody">Mensaje...</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (simple, igual estilo) -->
+  <footer class="container-fluid text-light py-5 border-top border-accent mt-5">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-12 col-md-4">
+          <h3 class="h4 fw-bold text-gold mb-4">KIZZEZ</h3>
+          <p class="text-white-70 mb-0">Café con alma, sabor con tradición</p>
+          <p class="text-white-70 mt-3"><i class="bi bi-geo-alt me-2"></i>Av. Principal 123, Los Olivos - Lima</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-4">Enlaces rápidos</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2"></i>Nuestra carta</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2"></i>Promociones</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2"></i>Reservas</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2"></i>Delivery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-4">Síguenos</h6>
+          <div class="d-flex gap-3 mb-4">
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width:40px; height:40px;"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width:40px; height:40px;"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width:40px; height:40px;"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+          </div>
+
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-3">Contacto</h6>
+          <p class="mb-2"><i class="bi bi-telephone me-2"></i>+51 954 651 321</p>
+          <p class="mb-0"><i class="bi bi-clock me-2"></i>Lun-Dom: 07:00 - 21:00</p>
+        </div>
+      </div>
+
+      <div class="text-center text-white-50 small mt-5 pt-3 border-top border-accent">© <span id="year"></span> 2025 Kizzez. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+</body>
+</html>

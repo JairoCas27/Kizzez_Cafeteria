@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kizzez - Contacto</title>
+  <link rel="icon" href="/img/logos/logo_Kizzez02.png" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Iconos Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- CSS personalizado (rutas corregidas) -->
+  <link rel="stylesheet" href="/CSS/styleInicio.css" />
+  <link rel="stylesheet" href="/CSS/styleContacto.css" />
+</head>
+<body class="bg-custom-dark">
+
+  <!-- Bootstrap JS (cargado al final por rendimiento) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para formulario  -->
+  <script src="/JS/scriptContacto.js"></script>
+
+  <!-- BARRA SUPERIOR: horario y teléfono -->
+  <div class="bg-dark border-bottom border-accent py-2">
+    <div class="container d-flex justify-content-between small text-white-50">
+      <div><i class="bi bi-clock me-1" aria-hidden="true"></i> Lun - Dom: 07:00 - 21:00</div>
+      <div><i class="bi bi-telephone me-1" aria-hidden="true"></i> +51 954 651 321 • Envíos en <strong class="text-gold">24h</strong></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky-top w-100">
+    <nav class="navbar navbar-expand-md navbar-dark py-2">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio Kizzez">
+          <img src="/img/logos/logo_Kizzez.png" alt="Logo Kizzez" class="rounded-circle" width="64" height="64" loading="lazy" />
+          <span class="fw-bold">KIZZEZ</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav text-uppercase fw-semibold">
+            <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="productos.html">Productos</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item px-2"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center ms-auto gap-3">
+          <!-- Dropdown usuario -->
+          <div class="dropdown">
+            <a class="text-white text-decoration-none d-flex align-items-center dropdown-toggle" href="#" id="userDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" role="button">
+              <i class="bi bi-person-circle fs-5" aria-hidden="true"></i>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="login.html" data-action="login">Iniciar sesión</a></li>
+              <li><a class="dropdown-item" href="registrarse.html" data-action="register">Registrarse</a></li>
+              <li><a class="dropdown-item" href="admin.html" data-action="admin">Admin</a></li>
+            </ul>
+          </div>
+
+          <!-- Carrito -->
+          <a href="#" class="text-white text-decoration-none position-relative" aria-label="Carrito">
+            <i class="bi bi-cart3 fs-5" aria-hidden="true"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold text-dark">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section class="container my-5 py-4">
+    <h2 class="text-center fw-bold display-5 mb-5 text-gold">Contáctanos ☕️</h2>
+
+    <div class="row">
+      <!-- Formulario de contacto -->
+      <div class="col-md-6">
+        <h4 class="text-gold">¡Queremos saber de ti! 😄</h4>
+        <p>¿Tienes alguna consulta o simplemente quieres compartir tu experiencia? ¡No dudes en escribirnos! ✨</p>
+
+        <!-- FORMULARIO: usa Bootstrap validation y muestra Toast al enviar -->
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Tu nombre</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico 📧</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Tu mensaje ☕️</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            <div class="invalid-feedback">Por favor escribe tu mensaje.</div>
+          </div>
+
+          <button type="submit" class="btn btn-warning mb-3">Enviar mensaje 🚀</button>
+        </form>
+
+        <!-- Redes sociales -->
+        <h4 class="text-gold mb-3">Síguenos en nuestras redes sociales 📱</h4>
+        <div class="social-icons d-flex gap-3">
+          <a href="https://www.facebook.com/kizzez" class="text-white" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Kizzez"><i class="bi bi-facebook fs-4" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/kizzez" class="text-white" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Kizzez"><i class="bi bi-instagram fs-4" aria-hidden="true"></i></a>
+          <a href="https://www.tiktok.com/@kizzez" class="text-white" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Kizzez"><i class="bi bi-tiktok fs-4" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <!-- Mapa de Google -->
+      <div class="col-md-6">
+        <h4 class="text-center fw-bold display-5 mb-4 text-gold">Ubícanos en el mapa 📍</h4>
+        <iframe
+          title="Mapa - Kizzez Los Olivos"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.3119596254082!2d-77.07276692403863!3d-11.952889888276612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d1d877f532d7%3A0x8db19fe8e1f40feb!2sUniversidad%20Tecnol%C3%B3gica%20del%20Per%C3%BA!5e0!3m2!1ses-419!2spe!4v1756589481226!5m2!1ses-419!2spe"
+          width="100%" height="400" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <h4 class="text-gold mt-3">Nos encuentras aquí 📍</h4>
+        <p><strong>Dirección:</strong> Av. Principal 123, Los Olivos - Lima</p>
+        <p><strong>Horario:</strong> Lun - Dom: 07:00 - 21:00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast de Bootstrap (colocado al final del body) -->
+  <div aria-live="polite" aria-atomic="true" class="position-relative">
+    <div id="toastContainer" class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+      <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" tabindex="-1">
+        <div class="d-flex">
+          <div class="toast-body">
+            ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/51954651321" class="floating-btn" aria-label="WhatsApp de Kizzez" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-whatsapp fs-3" aria-hidden="true"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="container-fluid text-light py-5 border-top border-accent mt-5">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-12 col-md-4">
+          <h3 class="h4 fw-bold text-gold mb-4">KIZZEZ</h3>
+          <p class="text-white-70 mb-0">Café con alma, sabor con tradición</p>
+          <p class="text-white-70 mt-3"><i class="bi bi-geo-alt me-2" aria-hidden="true"></i>Av. Principal 123, Los Olivos - Lima</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-4">Enlaces rápidos</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2" aria-hidden="true"></i>Nuestra carta</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2" aria-hidden="true"></i>Promociones</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2" aria-hidden="true"></i>Reservas</a></li>
+            <li class="mb-3"><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-caret-right-fill text-gold me-2" aria-hidden="true"></i>Delivery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-4">Síguenos</h6>
+          <div class="d-flex gap-3 mb-4">
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width: 40px; height: 40px;" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width: 40px; height: 40px;" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" class="text-white text-decoration-none d-flex align-items-center justify-content-center rounded-circle bg-medium" style="width: 40px; height: 40px;" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+          </div>
+
+          <h6 class="fw-semibold text-uppercase small text-white-70 mb-3">Contacto</h6>
+          <p class="mb-2"><i class="bi bi-telephone me-2" aria-hidden="true"></i>+51 954 651 321</p>
+          <p class="mb-0"><i class="bi bi-clock me-2" aria-hidden="true"></i>Lun-Dom: 07:00 - 21:00</p>
+        </div>
+      </div>
+
+      <div class="text-center text-white-50 small mt-5 pt-3 border-top border-accent">© <span id="year"></span> 2025 Kizzez. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+</body>
+</html>
