@@ -32,11 +32,11 @@
   </div>
 
   <!-- NAVBAR -->
-  <header class="sticky-top w-100 mb-4">
-    <nav class="navbar navbar-expand-md navbar-dark">
+  <header class="sticky-top w-100">
+    <nav class="navbar navbar-expand-md navbar-dark py-2">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio Kizzez">
-          <img src="/img/logos/logo_Kizzez.png" alt="Logo Kizzez" class="rounded-circle" width="56" height="56" loading="lazy" />
+          <img src="/img/logos/logo_Kizzez.png" alt="Logo Kizzez" class="rounded-circle" width="64" height="64" loading="lazy">
           <span class="fw-bold">KIZZEZ</span>
         </a>
 
@@ -46,19 +46,32 @@
 
         <div class="collapse navbar-collapse justify-content-center" id="mainNav">
           <ul class="navbar-nav text-uppercase fw-semibold">
-            <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item px-2"><a class="nav-link" href="productos.html">Productos</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="productos.html">Carta</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="productos.html">Reservas</a></li>
             <li class="nav-item px-2"><a class="nav-link" href="servicios.html">Servicios</a></li>
             <li class="nav-item px-2"><a class="nav-link" href="contacto.html">Contacto</a></li>
           </ul>
         </div>
 
         <div class="d-flex align-items-center ms-auto gap-3">
-          <a class="text-white text-decoration-none d-flex align-items-center gap-2" href="#" aria-label="Usuario" data-bs-toggle="modal">
-            <i class="bi bi-person-circle fs-4"></i>
-          </a>
+          <!-- Dropdown usuario -->
+          <div class="dropdown">
+            <a class="text-white text-decoration-none d-flex align-items-center dropdown-toggle" href="#" id="userDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" role="button">
+              <i class="bi bi-person-circle fs-5" aria-hidden="true"></i>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="login.html" data-action="login">Iniciar sesión</a></li>
+              <li><a class="dropdown-item" href="registrarse.html" data-action="register">Registrarse</a></li>
+              <li><a class="dropdown-item" href="admin.html" data-action="admin">Admin</a></li>
+            </ul>
+          </div>
+
+          <!-- Carrito -->
           <a href="#" class="text-white text-decoration-none position-relative" aria-label="Carrito">
-            <i class="bi bi-cart3 fs-4"></i>
+            <i class="bi bi-cart3 fs-5"></i>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold text-dark">0</span>
           </a>
         </div>
